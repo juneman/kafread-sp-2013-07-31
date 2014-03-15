@@ -1,0 +1,92 @@
+#!/bin/sh
+
+BASE_DIR=$PWD
+
+CAT=$1
+UPLOAD=$2
+
+# 4
+if [ "$CAT" = "1" ];
+then
+	FILE_S=$3
+	if [ "$FILE_S" = "" ];
+	then
+		echo "please give source file"
+		exit
+	fi
+
+	CATE_STR="4grade"
+	FILE_NAME="$BASE_DIR/source/$CATE_STR/$FILE_S";
+	FILE_NAME="$BASE_DIR/source/$CATE_STR/$FILE_S";
+	CATEGORY="1"
+
+elif [ "$CAT" = "2" ];
+then
+# 6
+	CATE_STR="6grade"
+	FILE_NAME="$BASE_DIR/source/$CATE_STR/6grade.txt";
+	CATEGORY="2"
+	FILE_S="$CATE_STR.txt"
+else
+	echo "Not support"
+	exit
+fi
+
+WRITE_2_DB_LOG="$BASE_DIR/tmp/$CATE_STR/$FILE_S-db-log"
+SUCCESS_OUT="$BASE_DIR/tmp/$CATE_STR/$FILE_S-success"
+FAILED_OUT="$BASE_DIR/tmp/$CATE_STR/$FILE_S-failed"
+
+echo /dev/null > $WRITE_2_DB_LOG
+echo /dev/null > $SUCCESS_OUT
+echo /dev/null > $FAILED_OUT
+
+#----------------------
+
+DB_SERVER_IP="192.168.1.106"
+DB_SERVER_URL="http://$DB_SERVER_IP/hfdict/add"
+
+COUNTER=0
+TOTAL=`wc -l $FILE_NAME | awk '{print $1}'`
+
+cat $FILE_NAME | while read line
+do
+WORD=`echo $line | awk '{print $1}'`
+M=`echo $line | awk '{print $2}'`
+
+COUNTER=`expr $COUNTER + 1`
+
+echo "\n"
+echo "-$COUNTER / $TOTAL-- $WORD:"
+
+CACHED_FILE="$BASE_DIR/html_tmp/$CATE_STR/$WORD.html"
+if [ -f $CACHED_FILE ] ;
+then
+	echo "Using cached."	
+else
+	HTML=`curl http://cn.bing.com/dict/search?q=$WORD > $CACHED_FILE`;
+fi
+
+PR=`./tools/getPr $CACHED_FILE`
+A_PR=`echo $PR | awk -F\= '{print $1}'`
+B_PR=`echo $PR | awk -F\= '{print $2}'`
+
+CNT=`echo $PR | wc -l`
+if [ $CNT -eq 0  ];
+then
+	echo "$WORD" >> $FAILED_OUT; 
+else
+	ITEM="{\"word\":\"$WORD\", \"a_pr\":\"$A_PR\",\"b_pr\":\"$B_PR\",\"sm\":\"$M\"}";
+	echo $ITEM >> $SUCCESS_OUT;
+	echo "----$ITEM"
+
+	if [ "$UPLOAD" = "upload"  ];
+	then
+			WRITE2DB=`curl -d "word=$WORD" -d "category=$CATEGORY" -d "a_pr=$A_PR" -d "b_pr=$B_PR" -d "sm=$M" $DB_SERVER_URL  `
+			echo "$WRITE2DB  $ITEM" >> $WRITE_2_DB_LOG
+			echo "----write to db."
+	fi
+fi
+
+done
+
+

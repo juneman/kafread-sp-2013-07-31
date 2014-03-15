@@ -1,0 +1,81 @@
+
+<?php echo $this->navigation; ?>
+
+<div class="container-fluid span11 offset1 page-container">
+	<div class="row-fluid">
+	<h3><?php echo $this->word ?></h3>
+	<?php if($this->type == 1) :?>
+		<h5><?php echo $this->word; ?> 是 
+				<?php echo $this->prototype; ?>的第三人称单数
+		</h5>
+	<?php elseif ($this->type == 2) : ?>
+		<h5><?php echo $this->word; ?> 是 
+				<?php echo $this->prototype; ?>的过去式
+		</h5>
+	<?php elseif ($this->type == 3) : ?>
+		<h5><?php echo $this->word; ?> 是 
+				<?php echo $this->prototype; ?>的过去分词
+		</h5>
+	<?php elseif ($this->type == 4) : ?>
+		<h5><?php echo $this->word; ?> 是 
+				<?php echo $this->prototype; ?>的现在分词
+		</h5>
+	<?php elseif ($this->type == 5) : ?>
+		<h5><?php echo $this->word; ?> 是 
+				<?php echo $this->prototype; ?>Unknow
+		</h5>
+	<?php endif;?>
+	
+	<p>美式发音: <?php echo $this->value->a_pr;?> &nbsp;&nbsp;
+		英式发音: <?php echo $this->value->b_pr; ?>	
+	</p>
+	<h5>简明释义</h5>
+	<p>
+		<?php echo $this->value->sm;?>
+	</p>
+	<h5>同义词</h5>
+	<p>
+		<?php echo $this->value->synonym;?>
+	</p>
+	<h5>反义词</h5>
+	<p>
+		<?php echo $this->value->antonym;?>
+	</p>
+	<h5>用法搭配</h5>
+	<p>
+		<?php echo $this->value->usage;?>
+	</p>
+	<br>
+	<p>	
+		<?php 
+			if (strlen($this->value->tense_1) != 0 )
+			{
+				echo "第三人称单数:" . $this->value->tense_1 . "<br>";
+			}
+			
+			if (strlen($this->value->tense_2) != 0 )
+			{
+				echo "过去式:" . $this->value->tense_2 . "<br>";
+			}
+			
+			if (strlen($this->value->tense_3) != 0 )
+			{
+				echo "过去分词:" . $this->value->tense_3 . "<br>";
+			}
+			
+			if (strlen($this->value->tense_4) != 0 )
+			{
+				echo "现在分词:" . $this->value->tense_4 . "<br>";
+			}
+			
+			if (strlen($this->value->tense_5) != 0 )
+			{
+				echo "Unknown:" . $this->value->tense_5 . "<br>";
+			}
+		?>
+	</p>
+
+
+
+	</div>
+</div>

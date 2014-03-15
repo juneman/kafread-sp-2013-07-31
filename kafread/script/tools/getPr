@@ -1,0 +1,24 @@
+#!/bin/sh
+
+HTML_FILE=$1;
+
+A_LINES=`cat $HTML_FILE | sed 's/<div class=/\n/g' | sed 's/<\/div>/\n/g' | grep '^\"hd_prUS\">' `;
+B_LINES=`cat $HTML_FILE | sed 's/<div class=/\n/g' | sed 's/<\/div>/\n/g' | grep '^\"hd_pr\">' `;
+
+A_PR="";
+B_PR="";
+
+for line in $A_LINES
+do
+A_PR=`echo $line | sed 's/\(.*\)\[\(.*\)\]\(.*\)/\2/g' | sed 's/&/%26/g'`;
+break
+done
+
+
+for line in $B_LINES
+do
+B_PR=`echo $line | sed 's/\(.*\)\[\(.*\)\]\(.*\)/\2/g' | sed 's/&/%26/g'`;
+break
+done
+
+echo "[$A_PR]=[$B_PR]";

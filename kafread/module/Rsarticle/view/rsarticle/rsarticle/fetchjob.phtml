@@ -1,0 +1,20 @@
+<?php
+$code = $this->code;
+if ($code['code'] == 'no')
+{
+	echo "0";
+}
+else if ($code['code'] == 'ok')
+{
+	$job_ids = "";
+	foreach ($code['result'] as $row) {
+		$job_ids = $job_ids . " " . $row->job; 
+	}
+	echo $job_ids;
+}
+else
+{
+	echo "0";
+}
+
+?>

@@ -1,0 +1,36 @@
+
+<div class = "container-fluid  span11 offset1 page-container">
+	<div class = "row-fluid">
+<?php if ($this->code != 'ok') : ?>
+	<h3>Fetch new words list failed.</h3>
+	<a href="/words">Please try it again</a>
+<?php elseif (count($this->lists) <= 0) : ?>
+	<h3>Congratunation!.</h3>
+	<p> You dont have any new words.</p>	
+<?php else : ?>
+<table class="table">
+<tr>
+	<th>Word</th>
+	<th>UserId</th>
+	<th>ts_add</th>
+	<th>ts_next</th>
+	<th>degree</th>
+	<th>&nbsp;</th>
+</tr>
+
+<?php foreach($this->lists as $item ) :  ?>
+<tr>
+	<td><?php echo $item->word; ?></td>
+	<td><?php echo $item->user_id; ?></td>
+	<td><?php echo $item->ts_add; ?></td>
+	<td><?php echo $item->ts_next; ?></td>
+	<td><?php echo $item->degree; ?></td>
+</tr>
+<?php endforeach;?>
+
+</table>
+<?php endif; ?>
+	</div>
+</div>
+
+

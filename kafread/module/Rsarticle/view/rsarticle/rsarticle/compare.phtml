@@ -1,0 +1,22 @@
+<?php
+
+$code=$this->code;
+if ($code['code'] == 'no')
+{
+	echo "0";
+}
+else if ($code['code'] == 'ok')
+{
+	$category="";
+	foreach( $code['result'] as $row )
+	{
+		$category = $category . " " .  $row->category;
+	}
+	
+	echo $category;
+}
+else
+{
+	echo "0";
+}
+?>

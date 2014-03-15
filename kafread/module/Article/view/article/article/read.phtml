@@ -1,0 +1,59 @@
+
+<?php if ($this->code == 'not-found') : ?>
+<?php	echo $this->navigation; ?>
+<div class="container-fluid span11 offset1 page-container">
+	<div class="row-fluid">
+		<h3>The article not found.</h3>
+		<a class="btn btn-primary btn-large" type="button" href='/article'>See All Articles</a>
+	</div>
+</div>
+<?php else : ?>
+<style type="text/css">
+	body {
+		padding-top: 40px;
+		padding-bottom: 20px;
+	}
+</style>
+
+<div class="container">
+	<div class="row">
+		
+		<div class="span8 offset2">
+			<div class="well bg-color-white">
+				<div class="reading-tool">
+					<h4 class="content-title"><?php echo $this->escapeHtml($this->article->title); ?></h4>
+					<div class="content-area">
+						<?php
+								$tmp = nl2br($this->article->contents);
+								echo $tmp;  
+						?>
+						
+					</div>
+					<h6><br><em><small><?php echo $this->escapeHtml($this->article->from_url); ?> </small></em></h6>
+					</div>
+				<div class="completed-action-btns">
+				<?php if ($this->history == null) : ?>
+
+					<input type="hidden" id="hidden-article-url"  value="<?php echo $this->escapeHtml($this->article->url); ?>"></input>
+					<button class="btn" id="not-need-to-read-btn">完成阅读</button>
+					<button class="btn btn-link btn-primary btn-mini" id="next-time-to-read-again-btn">再次安排阅读</button>
+					<button class="btn btn-success" id="rt-close-wnd-btn" style="display:none;">关闭本页面</button>
+				<?php else : ?>
+					<button class="btn disabled">
+					<?php if ($this->history->next == 0) : ?>
+					 已于&nbsp;&nbsp; <?php echo $this->history->ts; ?>&nbsp;&nbsp;完成对该文阅读
+					<?php else : ?>
+					 已于&nbsp;&nbsp; <?php echo $this->history->ts; ?>&nbsp;&nbsp;阅读过该文,自动推荐系统会在适当时候再次推荐该文
+					<?php endif; ?>
+					</button>
+					<button class="btn btn-success" id="rt-close-wnd-btn" style="display:inline-block;">关闭本页面</button>
+				<?php endif; ?>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<?php endif; ?>
+

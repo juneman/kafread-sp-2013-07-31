@@ -1,0 +1,216 @@
+#!/bin/bash
+
+FC_ACTION='fetchcontent'
+FJ_ACTION='fetchjob'
+CP_ACTION='compare'
+SAVE_MAP_ACTION='savemap'
+SAVE_STA_ACTION='savesta'
+URL='http://192.168.56.101/rsystem'
+
+ARTICLE_CACHE_DIR='article_cache'
+DATE=`date`
+T_DATE=`echo $DATE | sed 's/ /_/g' | sed 's/:/-/g'`
+
+LOG=$PWD/log/log-$$-$T_DATE.log
+
+###
+JOB_LIST=""
+get_job_list() {
+JOB_LIST=""
+JOB_LIST=`curl $URL/$FJ_ACTION`
+
+if [ "$JOB_LIST" = "0" ]
+then
+	echo "date: $DATE" >> $LOG
+	echo "error:no job there." >> $LOG
+	exit
+fi
+echo "--Fetch Job list: ( $JOB_LIST ) $DATE" >> $LOG
+}
+
+####
+CONTENT=""
+get_content() {
+local JOB_ID=$1
+local CACHE=$ARTICLE_CACHE_DIR/$JOB_ID.txt
+
+if [ -f $CACHE  ]
+then
+	echo "--USING CACHE: $CACHE" >> $LOG
+	CONTENT=`cat $CACHE`
+else 
+	CONTENT=`curl -d "aid=$JOB_ID" $URL/$FC_ACTION`
+	if [ "$CONTENT" = "0"  ]; then
+		echo "-" >> $LOG
+		echo "error:date: $DATE" >> $LOG
+		echo "error:job_id:$JOB_ID. cant download content." >> $LOG
+		echo "-" >> $LOG
+	else
+		echo "$JOB_ID: get content success." >> $LOG
+		echo $CONTENT > $ARTICLE_CACHE_DIR/$JOB_ID.txt 
+	fi
+fi
+}
+
+#############
+TOTAL_WORDS=""
+parse_content() {
+local JOB_ID=$1
+local AID=$1
+local	CACHE=$ARTICLE_CACHE_DIR/$JOB_ID.txt
+local	CNT_LIST=""
+local CODE=""
+local CATEGORY_TMP="log/$JOB_ID-category_tmp_file-$T_DATE.$$"
+local WORD_COUNT_TMP="log/$JOB_ID-word_count_file-$T_DATE.$$"
+TOTAL_WORDS=""
+
+###clean
+[ -f $CATEGORY_TMP  ] &&  /bin/rm -f $CATEGORY_TMP
+[ -f $WORD_COUNT_TMP  ] &&  /bin/rm -f $WORD_COUNT_TMP
+
+if [ -f $CACHE ] 
+then
+	CNT_LIST=`cat $CACHE | sed -r 's/[^a-zA-Z]+/ /g'`;
+else
+	echo "$JOB_ID: article file $CACHE not exist." >> $LOG
+	return;
+fi
+
+TOTAL_WORDS=`echo $CNT_LIST | wc -w | awk '{print $1}'`
+echo "$JOB_ID: total_words:$TOTAL_WORDS" >> $LOG
+
+###create statics
+for w in $CNT_LIST 
+do
+	local c=`grep -i "^$w," $CATEGORY_TMP | wc -l | awk '{print $1}'`
+	if [ "$c" -eq 0 ] ; then
+		echo "$JOB_ID: $w not cached, curling..." >> $LOG
+		CODE=`curl -d "word=$w" $URL/$CP_ACTION`
+		if [ "$CODE" = "0" ]; then
+			echo "$JOB_ID: error: $w curl failed." >> $LOG
+		else
+			echo "$w,$CODE" >> $CATEGORY_TMP
+			echo "$w" >> $WORD_COUNT_TMP
+			echo "$JOB_ID:$w fetched success. cat:$CODE" >> $LOG
+
+		fi
+	else
+		echo "$w" >> $WORD_COUNT_TMP
+		echo "$JOB_ID: $w cached, not need curl..." >> $LOG
+	fi
+done
+}
+
+
+#####################
+parse_words() {
+local JOB_ID=$1
+local AID=$1
+local CATEGORY_TMP="log/$JOB_ID-category_tmp_file-$T_DATE.$$"
+local WORD_COUNT_TMP="log/$JOB_ID-word_count_file-$T_DATE.$$"
+#######
+### 1,cet4
+### 2,cet6
+### 3,ge
+### 4,gre
+### 5,toefl
+###############
+local CET4_NUM=0
+local CET6_NUM=0
+local GE_NUM=0
+local GRE_NUM=0
+local TOEFL_NUM=0
+
+if [ -f $CATEGORY_TMP ] && [  -f $WORD_COUNT_TMP ]
+then
+	echo ""
+else
+	echo "parse words:Log file : $CATEGORY_TMP not exist." >> $LOG
+	echo "parse words:Log file : $WORD_COUNT_TMP not exist." >> $LOG
+	echo "error" >> $LOG
+	exit
+fi
+
+while read line
+do
+	WD=`echo $line | awk -F, '{print $1}'`
+	CATS=`echo $line | awk -F, '{print $2}'`
+	TIMES=`grep -i "^$WD" $WORD_COUNT_TMP | wc -l | awk '{print $1}' `
+	
+#############
+	echo "-----$JOB_ID: cet4:$CET4_NUM, cet6:$CET6_NUM, ge:$GE_NUM, gre:$GRE_NUM, toefl:$TOEFL_NUM" >> $LOG
+	echo "word:$WD, times:$TIMES, cat:$CATS" >> $LOG
+#########
+	for cat in $CATS ; do
+		case "$cat" in
+			1) CET4_NUM=`expr $CET4_NUM + $TIMES `;;
+			2) CET6_NUM=`expr $CET6_NUM + $TIMES `;;
+			3) GE_NUM=`expr $GE_NUM + $TIMES` ;;
+			4) GRE_NUM=`expr $GRE_NUM + $TIMES `;;
+			5) TOEFL_NUM=`expr $TOEFL_NUM + $TIMES`;;
+			*) echo ------ >> $LOG
+				 echo error:--STATICS--ERROR:word:$WD,cat:$cat >> $LOG;;
+		esac
+	done
+	
+#echo "$JOB_ID: cet4:$CET4_NUM, cet6:$CET6_NUM, ge:$GE_NUM, gre:$GRE_NUM, toefl:$TOEFL_NUM" >> $LOG
+#########
+	for cat in $CATS; do
+		UP_C=`curl -d "word=$WD" -d "aid=$AID" -d "cat=$cat" -d "times=$TIMES" $URL/$SAVE_MAP_ACTION `
+		echo "CURL post word=$WD aid=$AID cat=$cat times=$TIMES UP_C:$UP_C..." >> $LOG
+	done
+done < $CATEGORY_TMP  #end of while
+
+echo "LAST:$JOB_ID: cet4:$CET4_NUM, cet6:$CET6_NUM, ge:$GE_NUM, gre:$GRE_NUM, toefl:$TOEFL_NUM" >> $LOG
+
+##########
+UP_SC=`curl -d "aid=$AID" -d "total=$TOTAL_WORDS" \
+						-d "cet4=$CET4_NUM" -d "cet6=$CET6_NUM" \
+						-d "ge=$GE_NUM" -d "gre=$GRE_NUM" \
+						-d "toefl=$TOEFL_NUM" $URL/$SAVE_STA_ACTION `	
+
+echo "UP STATICS:UP_SC:$UP_SC, aid=$AID total=$TOTAL_WORDS \
+					cet4=$CET4_NUM cet6=$CET6_NUM \
+					ge=$GE_NUM gre=$GRE_NUM toefl=$TOEFL_NUM \
+					$URL/$SAVE_STA_ACTION" >> $LOG	
+
+###clean
+/bin/rm -f $CATEGORY_TMP
+/bin/rm -f $WORD_COUNT_TMP
+
+}
+
+
+#############
+main() {
+
+get_job_list;
+
+for job_id in $JOB_LIST
+do
+	echo "" >> $LOG
+	echo "" >> $LOG
+	echo "--------------------" >> $LOG
+	echo "$job_id:start--------------------" >> $LOG
+	get_content $job_id
+	if [ "$CONTENT" = "0" ]
+	then
+		echo "$job_id:end-content null-------------------" >> $LOG
+		continue;
+	fi
+	parse_content $job_id
+	parse_words $job_id
+	echo "$job_id:end-parse finished-------------------" >> $LOG
+
+	echo "" >> $LOG
+	echo "" >> $LOG
+
+done
+
+}
+
+#####
+main;
+
+exit
+

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+FILES="a-b.txt c-d.txt e-f-g.txt h-i-j.txt l-m-n-o.txt p-q-r-s.txt t-u-v-w-xyz.txt"
+
+
+for file in $FILES 
+do
+
+./start 1 upload $file
+
+
+done

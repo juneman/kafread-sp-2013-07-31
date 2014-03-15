@@ -1,0 +1,29 @@
+
+<?php 
+include("head.phtml");
+?>
+
+<table class="table">
+<tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Artist</th>
+    <th>&nbsp;</th>
+</tr>
+
+
+<?php foreach($albums as $album) : ?>
+<?php print_r($album)  ?>
+<tr>
+    <td><?php echo $this->escapeHtml($album->id);?></td>
+    <td><?php echo $this->escapeHtml($album->title);?></td>
+    <td><?php echo $this->escapeHtml($album->artist);?></td>
+    <td>
+        <a href="<?php echo $this->url('album',
+            array('action'=>'edit', 'id' => $album->id));?>">Edit</a>
+        <a href="<?php echo $this->url('album',
+            array('action'=>'delete', 'id' => $album->id));?>">Delete</a>
+    </td>
+</tr>
+<?php endforeach; ?>
+</table>

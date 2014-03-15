@@ -1,0 +1,62 @@
+<?php echo $this->navigation; ?>
+
+<div class="container-fluid span11 offset1 page-container">
+	<div class="row-fluid">
+		<div class="articles-list-wrap">
+			<div class="articles-list-operate">
+				<span class="active">RECOMMENDED</span>
+				<a href="#"><span class="inactive"><small>HISTORY</small></span></a> 
+			</div>
+			<ul class="articles-list" id="articles-list-container">
+			</ul>
+		</div>
+	</div>
+</div>
+
+<script src="/assets/js/jquery-1.10.1.min.js"></script>
+<script >
+
+function load_ar()
+{
+	var data = {
+		'page':'0',
+		'limit':'5'
+	}
+
+	$.post('/rsystem/recommend', data, function(rsp){
+			if (rsp.code == 'ok')
+			{
+				var nums = rsp.nums;
+				if (nums < 1) {
+					alert('No article recommend.');
+					return;
+				}
+				
+				var container = $("#articles-list-container");
+				for (var i = 0; i < nums; i++)
+				{
+					var obj = rsp[i];
+					var htmlcode ='<li> ' +
+												'<div class=\"article-section span7\">' +
+												'<h4><a href=\"/article/read/' + obj.url + '\" target=\"_blank\">' +
+												'<span class=\"article-title\">' + obj.title +'</span></a>' +
+												'  </h4> ' +
+												'  <p class=\"article-summary\">' +
+												obj.summary +
+												' </p> ' +
+												' <h6> ' +
+												'     <em><small>' + obj.from_url+ ' </small></em>' +
+												' </h6>' +
+												' </div>' +
+												'</li>';
+					container.append(htmlcode);
+				} // for
+			} // if 
+	},'json');// post 
+
+}
+
+$(document).ready(function(){load_ar();});
+
+</script>
+

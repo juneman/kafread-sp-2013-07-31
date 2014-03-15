@@ -1,0 +1,470 @@
+label n.标签；标记，符号 
+laboratory n.实验室，研究室 
+labour n.劳动；工作；劳工 
+lace n.鞋带，系带；花边 
+lack vi.&vi.&n.缺乏，不足 
+ladder n.梯子，梯状物 
+lag vi.走得慢 n.落后 
+lamb n.羔羊，小羊；羔羊肉 
+lame a.跛的；瘸的，残废的 
+landing n.上岸，登陆，着陆 
+landlady n.女房东；女地主 
+landlord n.地主；房东，店主 
+lane n.(乡间)小路；跑道 
+language n.语言，语言课程 
+lantern n.提灯，灯笼 
+lap n.膝部；一圈 
+largely ad.大部分；大量地 
+laser n.激光 
+last vi.持续，持久；耐久 
+lately ad.最近，不久前 
+Latin a.拉丁的 n.拉丁语 
+latter a.(两者中)后者的 
+laughter n.笑，笑声 
+launch vt.发射，投射；发动 
+laundry n.洗衣房，洗衣店 
+lavatory n.盥洗室，厕所 
+lawn n.草地，草坪，草场 
+lay vt.置放；铺设；设置 
+layer n.层，层次；铺设者 
+layout n.布局，安排，设计 
+lead vt.为…带路；领导  n.铅，铅制品 
+leader n.领袖，领导人；首领 
+leadership n.领导 
+leading a.指导的；最主要的 
+league n.同盟，联盟；联合会 
+leak vi.漏；泄露 n.漏洞 
+lean vi.倾斜，屈身；靠 
+leap vi.跳，跃 n.跳跃 
+learned a.有学问的；学术上的 
+learning n.学习；学问，知识 
+least a.最少的 ad.最少 
+leather n.皮革；皮革制品 
+lecture n.&vi.演讲，讲课 
+legal a.法律的；合法的 
+legend n.传说，传奇 
+leisure n.空闲时间；悠闲 
+lemon n.柠檬，柠檬树 
+length n.长，长度；一段 
+lens n.透镜，镜片；镜头 
+less a.更少的 ad.更少地 
+lessen vt.减少，减轻；缩小 
+lesson n.功课，课；课程 
+lest conj.惟恐，以免 
+level n.水平面 a.水平的 
+lever n.杆，杠杆；控制杆 
+liable a.易于…的；可能的 
+liar n.说谎的人 
+liberal a.心胸宽大的；慷慨的 
+liberate vt.解放；释放 
+liberation n.解放 
+liberty n.自由；释放；许可 
+librarian n.图书馆馆长 
+library n.图书馆；藏书 
+license n.许可；执照 vt.准许 
+lick vt.舔；舔吃 
+lid n.盖子，盖，囊盖 
+lie vi.躺，平放；位于  vi.说谎，欺骗 n.谎话 
+lieutenant n.陆军中尉；副职官员 
+lighten vt.照亮，使明亮 
+lightly ad.轻轻地，轻松地 
+lightning n.闪电，闪电放电 
+like vt.喜欢；喜爱；希望  prep.像，如；像要 
+likely a.可能的 ad.很可能 
+likewise ad.同样地；也，又 
+limb n.肢，臂，翼；树枝 
+lime n.石灰 
+limit n.限度；限制；范围 
+limitation n.限制；限度，局限 
+limited a.有限的 
+linen n.亚麻布；亚麻织物 
+liner n.班船，班机 
+link vt.有环连接 n.环 
+lip n.嘴唇 
+liquid n.液体 a.液体的 
+liquor n.酒；溶液，液剂 
+list n.表，目录 n.列举 
+listen vi.听，留神听；听从 
+listener n.听者，听众之一 
+liter n.升(容量单位) 
+literary a.文学(上)的 
+literature n.文学；文献 
+little a.小的；少；幼小的 
+lively a.活泼的；逼真的 
+liver n.肝；肝脏 
+living a.活的 n.生活，生计 
+living-room n.起居室 
+load vt.装；装满 n.负载 
+loaf n.一条面包，一个面包 
+loan n.贷款；暂借 vt.借出 
+local a.地方的；局部的 
+locate vt.探明，找出，查出
+location n. 位置；定位；地点；地方
+lock n.锁 vt.锁上，锁住 
+locomotive n.火车头，机车
+lodge vi.暂住，借宿，投宿 
+log n.原木，木料 
+logic n.逻辑，推理；逻辑性 
+logical a.逻辑的；符合逻辑的 
+lonely a.孤独的；荒凉的 
+loop n.圈，环，环孔 
+loose a.松的；宽松的 
+loosen vt.解开；使松驰 
+lord n.贵族；上帝，基督 
+lorry n.运货汽车，卡车 
+lose vt.失去；迷失；输掉 
+loss n.遗失；损失；失败 
+lot n.许多，大量；签，阄 
+loud a.响亮的；吵闹的 
+loudspeaker n.扬声器，喇叭 
+lovely a.可爱的；令人愉快的 
+lover n.爱好者；情人；情侣 
+lower a.较低的 vt.放下 
+loyal a.忠诚的，忠心的 
+loyalty n.忠诚，忠心 
+lucky a.幸运的；吉祥的 
+luggage n.行李；皮箱，皮包 
+lumber n.木材；木料；制材 
+lump n.团，块；肿块 
+luxury n.奢侈，奢华；奢侈品 
+machine n.机器；机械 
+mad a.发疯的；恼火的 
+madam n.夫人，女士，太太 
+magazine n.杂志，期刊 
+magic n.魔法，巫术；戏法 
+magnet n.磁铁，磁石，磁体 
+magnetic a.磁的，有吸引力的 
+magnificent n.壮丽的；华丽的 
+maid n.女佣，女仆；少女 
+mail n.邮件 vt.邮寄 
+main a.主要的，最重要的 
+mainly ad.主要地，大体上 
+mainland n.大陆 
+maintain vt.维持；赡养；维修 
+maintenance n.维持，保持；维修 
+major a.较大的 n.专业 
+majority n.多数，大多数 
+male a.男的，雄的 n.男子 
+manage vt.管理；设法；对付 
+management n.管理；经营，处理 
+manager n.经理，管理人 
+mankind n.人类 
+manly a.男子气概的，果断的 
+manner n.方式；态度；礼貌 
+manual a.体力的 n.手册 
+manufacture vt.制造 n.制造；产品 
+manufacturer n.制造商；制造厂 
+many a.许多的 pron.许多人 
+marble n.大理石 
+margin n.页边的空白；边缘 
+marine a.海的；海上的 
+mark n.斑点；记号 vt.标明 
+market n.市场；集市；销路 
+marriage n.结婚，婚姻；婚礼 
+married a.已婚的；婚姻的 
+marry vt.娶，嫁 vi.结婚 
+marvelous a.奇迹般的；了不起的 
+Marxisim n.马克思主义 
+Marxist a.马克思主义的 
+mask n.面具；伪装 vt.掩饰 
+mass n.众多；团；群众 
+master n.主人；能手；硕士 
+masterpiece n.杰作，名著 
+mat n.席子；草席；垫子 
+match n.比赛，竞赛；对手  n.(一根)火柴 
+mate n.伙伴，同事；配偶 
+material n.材料；素材a.物质的 
+materialism n.唯物主义 
+mathematical a.数学的，数学上的 
+mathematics n.数学 
+maths n.(英)数学 
+matter n.事情；物质 vi.要紧 
+mature a.成熟的 vt.使成熟 
+maximum n.最大量 a.最大的 
+mayor n.市长 
+meadow n.草地，牧草地 
+mean a.自私的；吝啬的 a.平均的 n.平均值 
+meaning n.意义，意思；意图 
+means n.方法，手段，工具 
+meantime n.其时，其间 ad.当时 
+meanwhile ad.同时，当时 
+measurable a.可测量的 
+measure vt.量，测量 n.分量 
+measurement n.衡量，测量；尺寸 
+mechanic n.技工，机械，机修工 
+mechanical a.机械的；力学的 
+mechanically ad.机械地 
+mechanics n.力学；技术性细节 
+medal n.奖章，勋章，纪念章 
+medical a.医学的；内科的 
+medicine n.内服药；医学 
+Mediterranean n.地中海 a.地中海的 
+medium n.媒质；中间a.中等的 
+meeting n.聚集，会合，会见 
+melon n.瓜，甜瓜 
+melt vi.融化 vt.使融化 
+member n.成员，会员 
+memorial a.纪念的；记忆的 
+memory n.记忆；回忆；存储 
+mend vt.修理，修补，缝补 
+mental a.智力的；精神的 
+mention vt.&n.提及，说起 
+menu n.菜单；饭菜，菜肴 
+merchant n.商人；零售商 
+mercury n.水银，汞 
+Mercury n.水星 
+mercy n.仁慈，慈悲，恩惠 
+merely ad.仅仅，只不过 
+merit n.长处，优点；功过 
+merry a.欢乐的，愉快的 
+mess n.混乱，混杂，肮脏 
+message n.信息，消息；启示 
+messenger n.送信者，信使 
+metal n.金属，金属制品 
+meter n.计量器，计，表 
+method n.方法，办法；教学法 
+metric a.公制的，米制的 
+microcomputer n.微型计算机，微机 
+microphone n.话筒，麦克风 
+microscope n.显微镜 
+midday n.正午，中午 
+midnight n.午夜，子夜，夜半 
+midst n.中部，中间，当中 
+might v.aux.可能，会，也许  n.力量，威力，能力 
+mild a.和缓的；温柔的 
+military a.军事的；军人的 
+milk n.乳，牛奶 vt.挤(奶) 
+mill n.磨坊；制造厂 
+millimetre n.毫米 
+million num.百万 n.许多 
+mind n.头脑；理智；记忆 
+mine n.矿，矿山；地雷 
+miner n.矿工 
+mineral n.矿物 a.矿物的 
+minimum n.最小量 a.最小的 
+minister n.部长，大臣；公使 
+ministry n.(government的)部 
+minor a.较小的；较次要的 
+minority n.少数；少数民族 
+minus a.负的 prep.减(去) 
+minute n.分，分钟；一会儿 a.微细的；详细的 
+miracle n.奇迹，令人惊奇的人 
+mirror n.镜子 vt.反映，反射 
+miserable a.痛苦的，悲惨的 
+mislead vt.使误入岐途 
+miss vt.未看到；惦念 
+missile n.发射物；导弹 
+missing a.缺掉的，失去的 
+mission n.使命，任务；使团 
+mist n.薄雾 
+mistake n.错误 vi.误解，弄错 
+mistress n.女主人；夫人 
+misunderstand vt.误解，误会，曲解 
+mixture n.混合；混合物 
+moan n.呻吟声 vi.呻吟 
+mobile a.运动的；流动的 
+mode n.方式，样式 
+model n.模型；模式；模特儿 
+moderate a.温和的；有节制的 
+modern a.现代的，近代的 
+modest a.有节制的；谦虚的 
+modify vt.更改，修改；修饰 
+moist a.湿润的；多雨的 
+moisture n.潮湿，湿气；温度 
+molecule n.分子，克分子 
+monitor n.班长；监视器 
+monthly a.每月的 ad.每月 
+monument n.纪念碑；纪念馆 
+mood n.心情，情绪；语气 
+moral a.道德的；合乎道德的 
+moreover ad.再者，加之，此外 
+mortal a.终有一死的；致死的 
+mosquito n.蚊子 
+mostly ad.主要的，大部分 
+motion n.运动；手势；提议 
+motivate vt.促动；激励，激发 
+motive n.动机，目的 
+motor n.发动机；机动车 
+mould n.模子，模型 vt.浇铸 
+mount vt.登上，爬上 n.…山 
+mountain n.山，山岳；山脉 
+mourn vi.哀痛，哀悼 
+mouse n.鼠，耗子 
+mouth n.嘴，口，口腔 
+mouthful n.满口，一口，少量 
+movement n.动作，活动；移动 
+mud n.软泥，泥浆 
+muddy a.多泥的，泥泞的 
+mug n.大杯 
+multiple a.复合的；并联的 
+multiply vt.使增加；乘 
+murder n.&vi.谋杀，凶杀 
+murderer n.杀人犯，凶手 
+muscle n.肌肉，肌；体力 
+museum n.博物馆；展览馆 
+mushroom n.蘑菇，菌类植物 
+musical a.音乐的；和谐的 
+musician n.音乐家；作曲家 
+must v.aux.必须；必然要 
+mute a.缄默的 n.哑巴 
+mutter vi.轻声低语；抱怨 
+mutton n.羊肉 
+mutual a.相互的；共同的 
+mysterious a.神秘的；难以理解的 
+mystery n.神秘；神秘的事物 
+nail n.钉；指甲 vt.钉 
+naked a.裸体的；无遮敝的 
+namely ad.即，也就是 
+nap n.小睡，打盹，瞌睡 
+narrow a.狭的，狭窄的 
+nasty a.龌龊的；淫猥的 
+nation n.民族；国家 
+national a.民族的；国家的 
+nationality n.国籍；民族，族 
+native a.本土的 n.本地人 
+natural a.自然界的；天然的 
+naturally ad.自然地；天然地 
+nature n.大自然；本性；性质 
+naughty a.顽皮的，淘气的 
+naval n.海军的，军舰的 
+navigation n.航行；航海术；导航 
+navy n.海军 
+neat a.整洁的；熟练的 
+necessarily ad.必然，必定 
+necessary a.必要的；必然的 
+necessity n.必要性；必然性 
+neck n.颈，脖子 
+necklace n.项链，项圈 
+needle n.针，缝补，编织针 
+needless a.不需要的 
+negative a.否定的；消极的 
+neglect vt.忽视，忽略；疏忽 
+Negro n.黑人 
+neighbour n.邻居，邻国，邻人 
+neighbourhood n.邻居关系；邻近 
+nephew n.侄子，外甥 
+nerve n.神经；勇敢，胆量 
+nervous a.神经的；易激动的 
+nest n.巢，窝，穴 
+network n.网状物；网络 
+neutral a.中立的；中性的 
+never ad.永不，决不；不 
+nevertheless conj.然而 ad.仍然 
+newly ad.新近，最近 
+niece n.侄女，外甥女 
+night n.夜，夜间 
+nineteen num.十九，十九个 
+ninety num.九十，九十个 
+ninth num.第九；九分之一 
+nitrogen n.氮 
+noble a.贵族的；高尚的 
+noisy a.嘈杂的；喧闹的 
+none pron.没有人 ad.毫不 
+nonsense n.胡说，废话 
+normal a.正常的，普通的 
+normally ad.通常，正常地 
+northeast n.东北 a.位于东北的 
+northwest n.西北 a.位于西北的 
+noticeable a.显而易见的；重要的 
+noun n.名词 
+November n.十一月 
+nuclear a.原子核的；核心的 
+nucleus n.核，核心；(原子)核 
+nuisance n.讨厌的东西 
+numerous a.为数众多的；许多 
+nurse n.保姆；护士 vt.看护 
+nursery n.托儿所；苗圃 
+nut n.坚果，干果；螺母 
+nylon n.尼龙，耐纶 
+object n.物，物体；目的  vi.反对；抱反感 
+objection n.反对，异议；不喜欢 
+objective a.客观的；无偏见的 
+oblige vt.迫使；施恩惠于 
+observation n.注意；观察；观察力 
+observe vt.遵守；看到；说 
+observer n.观察员，观测者 
+obstacle n.障碍，障碍物，妨害 
+obtain vt.获得，得到，买到 
+obvious a.明显的，显而易见的 
+occasion n.场合，时刻；时机 
+occasional a.偶然的；临时的 
+occasionally ad.偶然；非经常地 
+occupation n.占领，占据；职业 
+occupy vt.占领；占，占有 
+occur vi.发生；出现，存在 
+occurrence n.发生，出现；事件 
+ocean n.海洋；洋 
+Oceania n.大洋洲 
+October n.十月 
+odd a.奇数的；单只的 
+odour n.气味，香气；味道 
+offend vt.冒犯 vi.犯过错 
+offer vt.提供；提出 n.提供 
+office n.办公室；处，局，社 
+officer n.官员；干事；军官 
+official a.官员的；官方的 
+omit vt.省略，省去；遗漏 
+onion n.洋葱，洋葱头 
+opening a.开始的 n.开始 
+opera n.歌剧 
+operate vi.操作；施行手术 
+operation n.操作；手术；运算 
+operational a.操作上的；可使用的 
+operator n.操作人员，接线员 
+opinion n.意见，看法，主张 
+opponent n.对手，敌手；对抗者 
+opportunity n.机会，良机 
+oppose vt.反对；反抗 
+opposite a.对面的 n.对立物 
+oppress vt.压迫，压制；压抑 
+optical a.眼的；光学的 
+optimistic a.乐观的；乐观主义的 
+option n.选择，选择权 
+optional a.可以任意选择的 
+orange n.橙(树)；柑(树) 
+orbit n.运行轨道 vt.环绕 
+orchestra n.管弦乐队 
+order n.次序；整齐 vt.命令 
+orderly a.整洁的；有秩序的 
+ordinary a.平常的；平凡的 
+ore n.矿，矿石，矿砂 
+organ n.器官；机构；管风琴 
+organic a.有机体的；器官的 
+organism n.生物体；有机体 
+organization n.组织；团体，机构 
+organize vt.组织，编组 
+oriental a.东方的；东方国家的 
+origin n.起源，由来；出身 
+original a.最初的；新颖的 
+ornament n.装饰物；装饰 
+orphan n.孤儿 
+otherwise ad.另外；要不然 
+ought v.aux.应当，应该 
+ounce n.盎司，英两 
+outcome n.结果，后果，成果 
+outdoor a.户外的，室外的 
+outdoors ad.在户外，在野外 
+outlet n.出口，出路；排遣 
+outline n.轮廓；略图；大纲 
+outlook n.观点，看法；展望 
+output n.产量；输出量；输出 
+outset n.开始，开端 
+outside n.外部；外表a.外部的 
+outskirt n.外边，郊区 
+outstanding a.突出的，杰出的 
+outward a.外面的；向外的 
+outwards ad.向外，往海外 
+oven n.炉，灶；烘箱 
+overall n.工装裤 a.全面的 
+overcoat n.外衣，大衣 
+overcome vt.战胜，克服 
+overhead a.在头顶上的；架空的 
+overlook vt.眺望；看漏；放任 
+overnight ad.一夜；突然 
+overseas ad.海外 a.在海外的 
+overtake vt.追上，赶上；压倒 
+overtime a.超时的，加班的 
+owe vt.欠；应把…归功于 
+owl n.猫头鹰，枭 
+ownership n.所有(权)，所有制 
+ox n.牛；公牛，阉牛 

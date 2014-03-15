@@ -1,0 +1,31 @@
+<?php
+$data = $this->code;
+
+if ($data['code'] != 'ok')
+{
+echo "";
+}
+else
+{
+
+	$btn_value = '<input type="button" class="pull-right btn btn-link btn-mini caf-bm-add-words-btn"' . 
+								' id="caf-bm-add-words-btn" value="加入生词本" onclick=onAddNewWord()></input>';
+	if ($data['isfaved'] == true) {
+		$btn_value = '<input type="button" class="pull-right btn btn-link btn-mini caf-btm-add-words-btn disable" value="已加入生词本"></input>';
+	}
+
+	$htmlCode='<div class="caf-bookmarklet-wrap">' .
+		'<dt class="caf-bm-mini-dict-head">' .
+		'<span class="caf-bm-word" id="caf-bm-word">' . $data['word'] . '</span>' . $btn_value .
+		'</dt><dd class="caf-bm-wd-pr"><span>英</span>&nbsp;&nbsp;' .
+		$data['b_pr'] . '&nbsp;&nbsp;&nbsp;<span>美</span>&nbsp;&nbsp;' .
+		$data['a_pr'] . '</dd>' .
+		'<dd class="caf-bm-wd-sm">' .
+		$data['sm'] .
+		'</dd></div>';
+	
+	echo $htmlCode;
+}
+
+
+?>

@@ -1,0 +1,56 @@
+
+<div class="container-fluid span11 offset1 home-container">
+	<div class="row-fluid">
+
+<?php if ($this->code == 'none') : ?>
+
+		<div class="articles-add-wrap span6">
+			<form class="form-article-editor" method="post" action="/article/add">
+				<h2 class="form-article-heading">Add New Article</h2>
+					<input type="text" class="input-block-level" required="required" placeholder="Title" name="title">
+					<input type="text" class="input-block-level" required="required" placeholder="Author" name="author">
+					<input type="url" class="input-block-level" required="required" placeholder="From URL" name="from_url">
+
+					<textarea class='article-summary-textarea input-block-level' placeholder="Summary" 
+						oninput="this.style.height='10px';this.style.height=(this.scrollHeight+'px');" 
+						onpropertychange="this.style.height=(this.scrollHeight+'px')" name="summary" /></textarea>
+					
+					<textarea class='article-editor-textarea input-block-level' placeholder="Content"  
+						oninput="this.style.height='10px';this.style.height=(this.scrollHeight+'px');" 
+						onpropertychange="this.style.height=(this.scrollHeight+'px')" name="contents" /></textarea>
+					<input class="btn btn-large btn-primary btn-block" type="submit" value="Submit">
+			</form>
+		</div>
+
+<?php elseif ($this->code == 'exist') : ?>
+		<div class="span6">
+			<h2>Add New Article</h2>
+			<p>
+					<h4>Add Failed.</h4>
+					<span>Article:</span>
+				  <a target="_blank"  href="<?php echo $this->url('article', array('action' => 'read', 'url' => $this->url)); ?>">
+					<strong><?php echo $this->escapeHtml($this->title) ?> </strong></a>
+					<span>&nbsp;&nbsp;exist! </span>
+			</p>
+			<p>
+					<a class="btn btn-primary" type="button" href="/article/add">Add Next New Article</a>
+			</p>
+		</div>
+<?php elseif ($this->code == 'ok') : ?>
+		<div class="span6">
+			<h2>Add New Article</h2>
+			<p>
+					<span>Add article:</span><br>
+				  <a target="_blank" href="<?php echo $this->url('article', array('action' => 'read', 'url' => $this->url)); ?>">
+					<strong><?php echo $this->escapeHtml($this->title) ?> </strong></a> <br>
+					<span>&nbsp;&nbsp;sucess! </span>
+			</p>
+			<p>
+					<a class="btn btn-primary" type="button" href="/article/add">Add Next New Article</a>
+			</p>
+		</div>
+<?php endif; ?>
+
+
+	</div>
+</div>
